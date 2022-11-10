@@ -1,0 +1,85 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		{
+            "path" : "pages/home/index",
+            "style" :                                                                                    
+            {
+                "navigationStyle":"custom",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/Journalism/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationStyle":"custom",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},{
+            "path" : "pages/video/index",
+            "style" :                                                                                    
+            {
+                "navigationStyle":"custom",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/user/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationStyle":"custom",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#2F3240",
+		"selectedColor": "#2F3240",
+		"borderStyle": "#c1c1c1",
+		"spacing": "4px",
+		"backgroundColor": "#ffffff",
+		"height": "60px",
+		"list": [
+			{
+				"pagePath": "pages/home/index",
+				"iconPath": "static/image/tabBer/home.png",
+				"selectedIconPath": "static/image/tabBer/homeSelected.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/Journalism/index",
+				"iconPath": "static/image/tabBer/shop.png",
+				"selectedIconPath": "static/image/tabBer/shopSelected.png",
+				"text": "商城"
+			}, {
+				"pagePath": "pages/video/index",
+				"iconPath": "static/image/tabBer/chest.png",
+				"selectedIconPath": "static/image/tabBer/chestSelected.png",
+				"text": "福箱"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"iconPath": "static/image/tabBer/my.png",
+				"selectedIconPath": "static/image/tabBer/mySelected.png",
+				"text": "我的"
+			}
+		]
+	}
+}
