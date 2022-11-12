@@ -16,3 +16,12 @@ export function registerAndLogin(data){
 		data
 	})
 }
+
+// 综合栏列表
+export function allofficial(data){
+	return request({
+		url: 'home/official/list.do',
+		method: 'POST',
+		data
+	})
+}

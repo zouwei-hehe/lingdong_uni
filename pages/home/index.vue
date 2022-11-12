@@ -8,42 +8,24 @@
 				<image src="../../static/image/home/textLogo.png" mode=""></image>
 			</view>
 			<view class="search">
-				<uni-easyinput  prefixIcon="search" v-model="value" placeholder="搜索" @iconClick="iconSearch" >
+				<uni-easyinput  prefixIcon="search" v-model="search" placeholder="搜索" @iconClick="iconSearch" >
 				</uni-easyinput>	
 				</view>
 		</view>
+		<Community></Community>
+		<Activity></Activity>
 		
-		<view class="community">
-			<view class="community_box">
-				<view class="community_area">
-					<view class="area_item area_official">
-						<image src="../../static/image/home/official.png" mode="" class="item_icon"></image>
-						<text class="item_text">官方公告</text>
-					</view>
-					<view class="area_item area_cooperation">
-						<image src="../../static/image/home/cooperation.png" mode="" class="item_icon"></image>
-						<text class="item_text">合作专区</text>
-					</view>
-					<view class="area_item area_golden">
-						<image src="../../static/image/home/golden.png" mode="" class="item_icon"></image>
-						<text class="item_text">金豆专区</text>
-					</view>
-				</view>
-				<view class="community_group">
-					官方
-				</view>
-			</view>
-		</view>
-		<view class="activity"></view>
-		<view class="exhibition"></view>
 	</view>
 </template>
 
 <script>
+	import Community from '../../components/community.vue'
+	import Activity from '../../components/activity.vue'
+	
 	export default {
 		data() {
 			return {
-				
+				search:''
 			};
 		},
 		methods:{
@@ -51,15 +33,20 @@
 			iconSearch(){
 				console.log(11)
 			}
+		},
+		components:{
+			Community,
+			Activity
 		}
 	}
 </script>
 
 <style lang="less" scoped>
+	
 	.content{
 		box-sizing: border-box;
 		background: #FAFAFC;
-		height: 100vh;
+		padding-bottom: 10rpx;
 		.header{
 			padding: 0 36rpx;
 			background: #FFFFFF;
@@ -133,7 +120,11 @@
 						}
 					}
 				}
+			    .community_group{
+					padding: 4rpx 0 24rpx 12rpx;
+				}
 			}
 		}
 	}
+	// .content::-webkit-scrollbar { width: 0 !important }
 </style>

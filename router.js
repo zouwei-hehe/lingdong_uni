@@ -5,7 +5,7 @@ const router = createRouter({
 	platform: process.env.VUE_APP_PLATFORM,  
 	routes: [...ROUTES]
 });
-const whiteList = ['/pages/login/index'] //免登录页面白名单
+const whiteList = ['/pages/login/index' ,'/pages/home/index','/pages/home/area'] //免登录页面白名单 
 const loginRoutePath = '/pages/login/index' //登录页
 const defaultRoutePath = '/pages/home/index' //首页
 //全局路由前置守卫

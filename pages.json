@@ -13,7 +13,6 @@
                 "navigationStyle":"custom",
                 "enablePullDownRefresh": false
             }
-            
         },
 		{
 		    "path" : "pages/Journalism/index",
@@ -22,7 +21,6 @@
 		        "navigationStyle":"custom",
 		        "enablePullDownRefresh": false
 		    }
-		    
 		},{
             "path" : "pages/video/index",
             "style" :                                                                                    
@@ -30,7 +28,6 @@
                 "navigationStyle":"custom",
                 "enablePullDownRefresh": false
             }
-            
         },
 		{
 		    "path" : "pages/user/index",
@@ -39,9 +36,22 @@
 		        "navigationStyle":"custom",
 		        "enablePullDownRefresh": false
 		    }
-		    
+		},
+		{
+			"path" : "pages/home/area",
+			"style" :                                                                                    
+			{
+			   "navigationBarTitleText": "官方公告",
+			   "navigationBarBackgroundColor": "#FFFFFF"
+			},
+			"app-plus":{
+				"scrollIndicator":"none"
+			}
 		}
     ],
+	"app-plus":{
+		"scrollIndicator":"none"
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

@@ -52,10 +52,7 @@
 
 </template>
 <script>
-	import {
-		generateCode,
-		registerAndLogin
-	} from '../../static/api/index.js'
+	import {generateCode,registerAndLogin} from '../../static/api/index.js'
 	export default {
 		data() {
 			return {
@@ -97,29 +94,33 @@
 			},
 			// 登录
 			 submitForm() {
-				this.$refs.form.validate().then( async res=>{
-					this.canAction = true
-					let temp = {
-							userPhone: this.formData.acount,
-							verifyCode: this.formData.code,
-							userInviteCode: this.formData.Invitation
-					}
-					let loginRes = await registerAndLogin(temp)
-					//设置token;
-					this.$store.commit('app/SET_TOKEN', loginRes.token)
-					this.$Router.pushTab({
-						path: '/pages/home/index'
-					})
-					this.canAction = false
-				  }).catch(err => {
-				  	console.log(err)
-				  	uni.showToast({
-				  		title:err.data.Message,
-				  		icon:'none',
-				  		duration:2000
-				  	})
-				  	this.canAction = false
-				  })
+				 console.log(11)
+				 this.$Router.pushTab({
+				 	path: '/pages/home/index'
+				 })
+				// this.$refs.form.validate().then( async res=>{
+				// 	this.canAction = true
+				// 	let temp = {
+				// 			userPhone: this.formData.acount,
+				// 			verifyCode: this.formData.code,
+				// 			userInviteCode: this.formData.Invitation
+				// 	}
+				// 	let loginRes = await registerAndLogin(temp)
+				// 	//设置token;
+				// 	this.$store.commit('app/SET_TOKEN', loginRes.token)
+				// 	this.$Router.pushTab({
+				// 		path: '/pages/home/index'
+				// 	})
+				// 	this.canAction = false
+				//   }).catch(err => {
+				//   	console.log(err)
+				//   	uni.showToast({
+				//   		title:err.data.Message,
+				//   		icon:'none',
+				//   		duration:2000
+				//   	})
+				//   	this.canAction = false
+				//   })
 			}
 		},
 		watch: {
