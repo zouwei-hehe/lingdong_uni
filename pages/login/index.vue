@@ -95,9 +95,12 @@
 			// 登录
 			 submitForm() {
 				 console.log(11)
-				 this.$Router.pushTab({
-				 	path: '/pages/home/index'
-				 })
+				 uni.switchTab({
+				 	url:"/pages/home/index"
+				 });
+				 // this.$Router.pushTab({
+				 // 	path: '/pages/home/index'
+				 // })
 				// this.$refs.form.validate().then( async res=>{
 				// 	this.canAction = true
 				// 	let temp = {

@@ -33,9 +33,13 @@
 		},
 		methods:{
 			official(){
-				this.$Router.push({
-					path:'/pages/home/area',
-				})
+				uni.navigateTo({
+					url: '/pages/home/area'
+				});
+				
+				// this.$Router.push({
+				// 	path:'/pages/home/area',
+				// })
 			}
 		}
 		
